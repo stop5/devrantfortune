@@ -1,0 +1,163 @@
+A young guy I work with burst into tears today, I had no idea what happened so I tried to comfort him and ask what was up. It appears his main client had gone nuts with him because they wanted him to make an internet toolbar (think Ask.com) and he politely informed them toolbars doesn't really exist anymore and it wouldn't work on things like modern browsers or mobile devices. Being given a polite but honest opinion was obviously something the client wasn't used to and knowing the guy was a young and fairly inexperienced, they started throwing very personal insults and asking him exactly what he knows about things (a lot more than them). So being the big, bold, handsome senior developer I am, I immediately phoned the client back and told them to either come speak to me face-to-face and apologise to him in person or we'd terminate there contract with immediate effect. They're coming down tomorrow...
+So part my rant, part a rant on behalf of a young developer who did nothing wrong and was treated like shit, I think we've all been there. We'll see how this goes! Who the hell wants a toolbar anyway?!
+-------
+Wow, I was not expecting the response this rant's received. A very big thank you to everyone who contributed, you've made a big difference in the last 24 hours. This morning I took our guy aside to show him devRant and this post, to put it mildly, he was very taken by all the support on here. To make it easier I will call our guy Tom (not his real name). Also, the client was a company, not just one person. So there was a meeting scheduled for 12pm today (BST) and the guy from the client company was coming down to speak to me in person about what happened yesterday. Tom was still very upset this morning so we spent the first hour scrolling through devRant and reading a lot of rants (thanks guys!). The plan was at 12pm I'd meet the guy from the client company, take him into an office and get his side of the story and explain Tom's side before taking things further. 12pm came and went, 12:15pm nothing, by 12:30pm I was furious and about to call him when the receptionist told us he was in the building. I went down to meet a woman, this wasn't right, I'd heard it was a man that had shouted at Tom. She introduced herself as the CEO of client company and wanted to speak to Tom and myself together. We went to an office and before I could start, Tom received the biggest apology I've ever seen. The reason the CEO was late was she'd stopped off to buy him a brand-new iPhone and MacBook Pro. The guy who worked at the client company and shouted at Tom was overheard by somebody in his own office. It appears the guy was already on his final warning and, as of this morning, has been sacked. He'd treated other people very badly in the past and he was reported yesterday by one of his own colleagues for how he'd spoken to Tom. It's hard to explain exactly what was said to yesterday because I want to avoid specifics, I'm sure a lot of people would say that these things happen all the time but the comments the guy made yesterday were incredibly personal about Tom and completely unacceptable for anyone. We spoke to the CEO for about 2 hours and she made it clear that she was on Tom's side as much as we were. She has already found someone to take over the sacked guy's role and wants Tom to continue working with her company with a much nicer replacement. I cannot thank devRant enough, I was furious last night when I wrote this rant and pretty much instantly got amazing feedback. This is my first rant to hit 175 +1s so I'm donating my stress ball to Tom and also getting him a t-shirt. Tom made a devRant account today, hopefully he can post some amazing content one day and get me a ball in return! Tom (a very positive guy) was so unhappy and worried last night that he was going to quit his job today, tonight he's happier than I've ever seen him. Gals, guys, commenters, +1ers and everyone who finds this rant in the future, I thank and salute you all!
+peaam (https://devrant.com/rants/194632)
+%
+"You gave us bad code! We ran it and now production is DOWN! Join this bridgeline now and help us fix this!"
+So, as the author of the code in question, I join the bridge... And what happens next, I will simply never forget.
+
+First, a little backstory... Another team within our company needed some vendor client software installed and maintained across the enterprise. Multiple OSes (Linux, AIX, Solaris, HPUX, etc.), so packaging and consistent update methods were a a challenge. I wrote an entire set of utilities to install, update and generally maintain the software; intending all the time that this other team would eventually own the process and code. With this in mind, I wrote extensive documentation, and conducted a formal turnover / training season with the other team.
+
+So, fast forward to when the other team now owns my code, has been trained on how to use it, including (perhaps most importantly) how to send out updates when the vendor released upgrades to the agent software.
+
+Now, this other team had the responsibility of releasing their first update since I gave them the process. Very simple upgrade process, already fully automated. What could have gone so horribly wrong? Did something the vendor supplied break their client?
+
+I asked for the log files from the upgrade process. They sent them, and they looked... wrong. Very, very wrong.
+
+Did you run the code I gave you to do this update?
+
+"Yes, your code is broken - fix it! Production is down! Rabble, rabble, rabble!"
+
+So, I go into our code management tool and review the _actual_ script they ran. Sure enough, it is my code... But something is very wrong.
+
+More than 2/3rds of my code... has been commented out. The code is "there"... but has been commented out so it is not being executed. WT-actual-F?!
+
+I question this on the bridge line. Silence. I insist someone explain what is going on. Is this a joke? Is this some kind of work version of candid camera?
+Finally someone breaks the silence and explains.
+
+And this, my friends, is the part I will never forget.
+
+"We wanted to look through your code before we ran the update. When we looked at it, there was some stuff we didn't understand, so we commented that stuff out."
+
+You... you didn't... understand... my some of the code... so you... you didn't ask me about it... you didn't try to actually figure out what it did... you... commented it OUT?!
+
+"Right, we figured it was better to only run the parts we understood... But now we ran it and everything is broken and you need to fix your code."
+
+I cannot repeat the things I said next, even here on devRant. Let's just say that call did not go well.
+
+So, lesson learned? If you don't know what some code does? Just comment that shit out. Then blame the original author when it doesn't work.
+
+You just cannot make this kind of stuff up.
+cdrice (https://devrant.com/rants/451202)
+%
+Interviewer: Welcome, Mr X. Thanks for dropping by. We like to keep our interviews informal. And even though I have all the power here, and you are nothing but a cretin, let’s pretend we are going to have fun here.
+
+Mr X: Sure, man, whatever.
+
+I: Let’s start with the technical stuff, shall we? Do you know what a linked list is?
+
+X: (Tells what it is).
+
+I: Great. Can you tell me where linked lists are used?
+
+X:: Sure. In interview questions.
+
+I: What?
+
+X: The only time linked lists come up is in interview questions.
+
+I:: That’s not true. They have lots of real world applications. Like, like…. (fumbles)
+
+X:: Like to implement memory allocation in operating systems. But you don’t sell operating systems, do you?
+
+I:: Well… moving on. Do you know what the Big O notation is?
+
+X: Sure. It’s another thing used only in interviews.
+
+I: What?! Not true at all. What if you want to sort a billion records a minute, like Google has to?
+
+X: But you are not Google, are you? You are hiring me to work with 5 year old PHP code, and most of the tasks will be hacking HTML/CSS. Why don’t you ask me something I will actually be doing?
+I: (Getting a bit frustrated)  Fine. How would you do FooBar in version X of PHP?
+
+X: I would, er, Google that.
+
+I: And how do you call library ABC in PHP?
+
+X: Google?
+
+I: (shocked) OMG. You mean you don’t remember all the 97 million PHP functions, and have to actually Google stuff? What if the Internet goes down?
+
+X: Does it? We’re in the 1st world, aren’t we?
+
+I: Tut, tut. Kids these days. Anyway,looking at your resume, we need at least 7 years of ReactJS. You don’t have that.
+
+X: That’s great, because React came out last year.
+
+I: Excuses, excuses. Let’s ask some lateral thinking questions. How would you go about finding how many piano tuners there are in San Francisco?
+
+X: 37.
+
+I: What?!
+
+X: 37. I googled before coming here. Also Googled other puzzle questions. You can fit 7,895,345 balls in a Boeing 747. Manholes covers are round because that is the shape that won’t fall in. You ask the guard what the other guard would say. You then take the fox across the bridge first, and eat the chicken. As for how to move Mount Fuji, you tell it a sad story.
+
+I: Ooooooooookkkkkaaaayyyyyyy. Right, tell me a bit about yourself.
+
+X: Everything is there in the resume.
+
+I: I mean other than that. What sort of a person are you? What are your hobbies?
+
+X: Japanese culture.
+
+I: Interesting. What specifically?
+
+X: Hentai.
+
+I: What’s hentai?
+
+X: It’s an televised art form.
+
+I: Ok. Now, can you give me an example of a time when you were really challenged?
+
+X: Well, just the other day, a few pennies from my pocket fell behind the sofa. Took me an hour to take them out. Boy was it challenging.
+
+I: I meant technical challenge.
+
+X: I once spent 10 hours installing Windows 10 on a Mac.
+
+I: Why did you do that?
+
+X: I had nothing better to do.
+
+I: Why did you decide to apply to us?
+
+X: The voices in my head told me.
+
+I: What?
+
+X: You advertised a job, so I applied.
+I: And why do you want to change your job?
+
+X: Money, baby!
+
+I: (shocked)
+
+X: I mean, I am looking for more lateral changes in a fast moving cloud connected social media agile web 2.0 company.
+
+I: Great. That’s the answer we were looking for.  What do you feel about constant overtime?
+
+X: I don’t know. What do you feel about overtime pay?
+
+I: What is your biggest weakness?
+
+X: Kryptonite. Also, ice cream.
+
+I: What are your salary expectations?
+
+X: A million dollars a year, three months paid vacation on the beach, stock options, the lot. Failing that, whatever you have.
+
+I: Great. Any questions for me?
+
+X: No.
+
+I: No? You are supposed to ask me a question, to impress me with your knowledge. I’ll ask you one. Where do you see yourself in 5 years?
+
+X: Doing your job, minus the stupid questions.
+
+I: Get out. Don’t call us, we’ll call you.
+
+All Credit to:
+http://pythonforengineers.com/the-programming-interview-from-hell/
+mak420 (https://devrant.com/rants/439016)
+%
