@@ -1,3 +1,166 @@
+A young guy I work with burst into tears today, I had no idea what happened so I tried to comfort him and ask what was up. It appears his main client had gone nuts with him because they wanted him to make an internet toolbar (think Ask.com) and he politely informed them toolbars doesn't really exist anymore and it wouldn't work on things like modern browsers or mobile devices. Being given a polite but honest opinion was obviously something the client wasn't used to and knowing the guy was a young and fairly inexperienced, they started throwing very personal insults and asking him exactly what he knows about things (a lot more than them). So being the big, bold, handsome senior developer I am, I immediately phoned the client back and told them to either come speak to me face-to-face and apologise to him in person or we'd terminate there contract with immediate effect. They're coming down tomorrow...
+So part my rant, part a rant on behalf of a young developer who did nothing wrong and was treated like shit, I think we've all been there. We'll see how this goes! Who the hell wants a toolbar anyway?!
+-------
+Wow, I was not expecting the response this rant's received. A very big thank you to everyone who contributed, you've made a big difference in the last 24 hours. This morning I took our guy aside to show him devRant and this post, to put it mildly, he was very taken by all the support on here. To make it easier I will call our guy Tom (not his real name). Also, the client was a company, not just one person. So there was a meeting scheduled for 12pm today (BST) and the guy from the client company was coming down to speak to me in person about what happened yesterday. Tom was still very upset this morning so we spent the first hour scrolling through devRant and reading a lot of rants (thanks guys!). The plan was at 12pm I'd meet the guy from the client company, take him into an office and get his side of the story and explain Tom's side before taking things further. 12pm came and went, 12:15pm nothing, by 12:30pm I was furious and about to call him when the receptionist told us he was in the building. I went down to meet a woman, this wasn't right, I'd heard it was a man that had shouted at Tom. She introduced herself as the CEO of client company and wanted to speak to Tom and myself together. We went to an office and before I could start, Tom received the biggest apology I've ever seen. The reason the CEO was late was she'd stopped off to buy him a brand-new iPhone and MacBook Pro. The guy who worked at the client company and shouted at Tom was overheard by somebody in his own office. It appears the guy was already on his final warning and, as of this morning, has been sacked. He'd treated other people very badly in the past and he was reported yesterday by one of his own colleagues for how he'd spoken to Tom. It's hard to explain exactly what was said to yesterday because I want to avoid specifics, I'm sure a lot of people would say that these things happen all the time but the comments the guy made yesterday were incredibly personal about Tom and completely unacceptable for anyone. We spoke to the CEO for about 2 hours and she made it clear that she was on Tom's side as much as we were. She has already found someone to take over the sacked guy's role and wants Tom to continue working with her company with a much nicer replacement. I cannot thank devRant enough, I was furious last night when I wrote this rant and pretty much instantly got amazing feedback. This is my first rant to hit 175 +1s so I'm donating my stress ball to Tom and also getting him a t-shirt. Tom made a devRant account today, hopefully he can post some amazing content one day and get me a ball in return! Tom (a very positive guy) was so unhappy and worried last night that he was going to quit his job today, tonight he's happier than I've ever seen him. Gals, guys, commenters, +1ers and everyone who finds this rant in the future, I thank and salute you all!
+peaam (https://devrant.com/rants/194632)
+%
+"You gave us bad code! We ran it and now production is DOWN! Join this bridgeline now and help us fix this!"
+So, as the author of the code in question, I join the bridge... And what happens next, I will simply never forget.
+
+First, a little backstory... Another team within our company needed some vendor client software installed and maintained across the enterprise. Multiple OSes (Linux, AIX, Solaris, HPUX, etc.), so packaging and consistent update methods were a a challenge. I wrote an entire set of utilities to install, update and generally maintain the software; intending all the time that this other team would eventually own the process and code. With this in mind, I wrote extensive documentation, and conducted a formal turnover / training season with the other team.
+
+So, fast forward to when the other team now owns my code, has been trained on how to use it, including (perhaps most importantly) how to send out updates when the vendor released upgrades to the agent software.
+
+Now, this other team had the responsibility of releasing their first update since I gave them the process. Very simple upgrade process, already fully automated. What could have gone so horribly wrong? Did something the vendor supplied break their client?
+
+I asked for the log files from the upgrade process. They sent them, and they looked... wrong. Very, very wrong.
+
+Did you run the code I gave you to do this update?
+
+"Yes, your code is broken - fix it! Production is down! Rabble, rabble, rabble!"
+
+So, I go into our code management tool and review the _actual_ script they ran. Sure enough, it is my code... But something is very wrong.
+
+More than 2/3rds of my code... has been commented out. The code is "there"... but has been commented out so it is not being executed. WT-actual-F?!
+
+I question this on the bridge line. Silence. I insist someone explain what is going on. Is this a joke? Is this some kind of work version of candid camera?
+Finally someone breaks the silence and explains.
+
+And this, my friends, is the part I will never forget.
+
+"We wanted to look through your code before we ran the update. When we looked at it, there was some stuff we didn't understand, so we commented that stuff out."
+
+You... you didn't... understand... my some of the code... so you... you didn't ask me about it... you didn't try to actually figure out what it did... you... commented it OUT?!
+
+"Right, we figured it was better to only run the parts we understood... But now we ran it and everything is broken and you need to fix your code."
+
+I cannot repeat the things I said next, even here on devRant. Let's just say that call did not go well.
+
+So, lesson learned? If you don't know what some code does? Just comment that shit out. Then blame the original author when it doesn't work.
+
+You just cannot make this kind of stuff up.
+cdrice (https://devrant.com/rants/451202)
+%
+Interviewer: Welcome, Mr X. Thanks for dropping by. We like to keep our interviews informal. And even though I have all the power here, and you are nothing but a cretin, let’s pretend we are going to have fun here.
+
+Mr X: Sure, man, whatever.
+
+I: Let’s start with the technical stuff, shall we? Do you know what a linked list is?
+
+X: (Tells what it is).
+
+I: Great. Can you tell me where linked lists are used?
+
+X:: Sure. In interview questions.
+
+I: What?
+
+X: The only time linked lists come up is in interview questions.
+
+I:: That’s not true. They have lots of real world applications. Like, like…. (fumbles)
+
+X:: Like to implement memory allocation in operating systems. But you don’t sell operating systems, do you?
+
+I:: Well… moving on. Do you know what the Big O notation is?
+
+X: Sure. It’s another thing used only in interviews.
+
+I: What?! Not true at all. What if you want to sort a billion records a minute, like Google has to?
+
+X: But you are not Google, are you? You are hiring me to work with 5 year old PHP code, and most of the tasks will be hacking HTML/CSS. Why don’t you ask me something I will actually be doing?
+I: (Getting a bit frustrated)  Fine. How would you do FooBar in version X of PHP?
+
+X: I would, er, Google that.
+
+I: And how do you call library ABC in PHP?
+
+X: Google?
+
+I: (shocked) OMG. You mean you don’t remember all the 97 million PHP functions, and have to actually Google stuff? What if the Internet goes down?
+
+X: Does it? We’re in the 1st world, aren’t we?
+
+I: Tut, tut. Kids these days. Anyway,looking at your resume, we need at least 7 years of ReactJS. You don’t have that.
+
+X: That’s great, because React came out last year.
+
+I: Excuses, excuses. Let’s ask some lateral thinking questions. How would you go about finding how many piano tuners there are in San Francisco?
+
+X: 37.
+
+I: What?!
+
+X: 37. I googled before coming here. Also Googled other puzzle questions. You can fit 7,895,345 balls in a Boeing 747. Manholes covers are round because that is the shape that won’t fall in. You ask the guard what the other guard would say. You then take the fox across the bridge first, and eat the chicken. As for how to move Mount Fuji, you tell it a sad story.
+
+I: Ooooooooookkkkkaaaayyyyyyy. Right, tell me a bit about yourself.
+
+X: Everything is there in the resume.
+
+I: I mean other than that. What sort of a person are you? What are your hobbies?
+
+X: Japanese culture.
+
+I: Interesting. What specifically?
+
+X: Hentai.
+
+I: What’s hentai?
+
+X: It’s an televised art form.
+
+I: Ok. Now, can you give me an example of a time when you were really challenged?
+
+X: Well, just the other day, a few pennies from my pocket fell behind the sofa. Took me an hour to take them out. Boy was it challenging.
+
+I: I meant technical challenge.
+
+X: I once spent 10 hours installing Windows 10 on a Mac.
+
+I: Why did you do that?
+
+X: I had nothing better to do.
+
+I: Why did you decide to apply to us?
+
+X: The voices in my head told me.
+
+I: What?
+
+X: You advertised a job, so I applied.
+I: And why do you want to change your job?
+
+X: Money, baby!
+
+I: (shocked)
+
+X: I mean, I am looking for more lateral changes in a fast moving cloud connected social media agile web 2.0 company.
+
+I: Great. That’s the answer we were looking for.  What do you feel about constant overtime?
+
+X: I don’t know. What do you feel about overtime pay?
+
+I: What is your biggest weakness?
+
+X: Kryptonite. Also, ice cream.
+
+I: What are your salary expectations?
+
+X: A million dollars a year, three months paid vacation on the beach, stock options, the lot. Failing that, whatever you have.
+
+I: Great. Any questions for me?
+
+X: No.
+
+I: No? You are supposed to ask me a question, to impress me with your knowledge. I’ll ask you one. Where do you see yourself in 5 years?
+
+X: Doing your job, minus the stupid questions.
+
+I: Get out. Don’t call us, we’ll call you.
+
+All Credit to:
+http://pythonforengineers.com/the-programming-interview-from-hell/
+mak420 (https://devrant.com/rants/439016)
+%
 "A different error message! Finally some progress!"
 bakablah (https://devrant.com/rants/17426)
 %
@@ -44,3 +207,214 @@ Compensation: $15-$20/hour, depends on the interview result.
 
 Education requirements: Bachelor's Degree of Engineering.
 marolt (https://devrant.com/rants/311042)
+%
+Planning a camping trip with my friends.
+
+Friend1: I'll brings the snacks.
+
+Friend2: I'll bring the equipment to build the tents.
+
+Friend3: I'll bring the first aid kit.
+
+Everybody: who's bringing the equipment to make the fire?
+
+Me: I'll do that. I'll just run Android Studio on my Laptop.
+
+Everybody: woah woah man! Take it easy! We just want a simple fire, not burn the whole forest down!
+rigoymoi182 (https://devrant.com/rants/1389346)
+%
+Not a windows hate rant, just a funny encounter at work.
+
+Was configuring KDE on my work pc and got the windows key to work after a little configuration.
+
+Me: YAY I finally got the windows key to launch the application menu bar thingy!!
+Colleague 1 (fellow support engineer): WINDOWS?! Thanks for the ear cancer mate 😕
+Colleague 2 (fellow support engineer): Hey stop swearing!
+Colleague 3 (fellow support engineer): *grabs bearest waste bin, pulls it open, puts head in and starts to make vomiting noises* *pulls head out: don't do that again 😓"*
+Colleague 4 (senior Linux engineer): *gives me a death stare for about a minute"
+
+Me: *completely losing it* 🤣
+
+I fucking love this place 😊
+linuxxx (https://devrant.com/rants/1391439)
+%
+"Are you familiar with uploading your code to Google Drive?"
+
+I left the building at that exact moment
+skiilaa (https://devrant.com/rants/535480)
+%
+Meeting with asshole partner company CEO at restaurant.
+
+Me: "I'm a bit worried about the bugs in your API. There are some ways to retrieve privacy sensitive info from public endpoints"
+
+CEO: "Well, we're a rapidly growing startup!"
+
+Me: "Uh... so?"
+
+CEO: "So... Move Fast and Break Things! Priority is to improve our API further, and we'll fix bugs as they show up"
+
+Me: "Maybe you should stop trying to emulate Zuckerberg in your management style. You know that even Facebook themselves admitted that their slogan was a retarded mistake"
+
+Waiter shows up at table. CEO orders some overly expensive fish salad.
+
+CEO: "Well, they have done something right... they're worth billions"
+
+Waiter asks me: "And you sir, have you made your choice?"
+
+Me: "Do you serve popcorn?"
+
+CEO: "Popcorn for lunch?"
+
+Me: "No, for your congressional hearing"
+bittersweet (https://devrant.com/rants/1360919)
+%
+"Why should I use a framework? I can program something that works without all that extra weight."
+
+"Git internals? Why should I learn about them if I'm not facing a problem?"
+
+"OOP? Who needs that crap? It just clutters everything and then you have to work with a million files"
+
+"Testing? Nah, we don't have time for that."
+
+"Code reviews? Nah, we don't have time for that."
+
+"Docker? Sounds cool but it doesn't support windows 7 so let's stick with VirtualBox."
+
+I have lots more, but I'm getting close to grabbing a rope and a chair so I'll just stop right now 🤷‍♂️
+tkore (https://devrant.com/rants/1329992)
+%
+We were all 16 once right? When I was 16, my school had a network of Windows 2000 machines. Since I was learning java at the time, I thought learning batch scripting would be fun.
+
+One day I wrote a script that froze input from the mouse and displayed a pop up with a scary “Critical System Error: please correct before data deletion!!”. It also displayed a five minute countdown timer, after which the computer restarted.
+
+I may or may not have replaced the internet explorer icon on the desktop with a link to my program on the entire student lab of computers. Chaos.
+Diactoros (https://devrant.com/rants/1253130)
+%
+"I really love the new $3k Fortigate firewall switch you bought for the office after our chat about security but it doesn't change the fact that you can access any computer in the company using Password123" - me
+kurtr (https://devrant.com/rants/1247785)
+%
+Interview with a candidate. He calls himself "C++ expert" on his resume. I think: "oh, great, I love C++ too, we will have an interesting conversation!"
+
+Me: let's start with an easy one, what is 'nullptr'?
+Him: (...some undecipherable sequence of words that didn't make any sense...)
+
+In my mind: mh, probably I didn't understand right. Let's try again with something simple and more generic
+
+Me: can you tell me about memory management in C++?
+Him: you create objects on the stack with the 'new' keyword and they get automatically released when no other object references them
+
+In my mind: wtf is this guy talking about? Is he confusing C++ with Java? Does he really know C++? Let's make him write some code, just to be sure
+
+Me: can you write a program that prints numbers from 1 to 10?
+
+Ten minutes and twenty mistakes later...
+
+Me: okay, so what is this <int> here in angle brackets? What is a template?
+Him: no idea
+
+Me: you wrote 'cout', why sometimes do I see 'std::cout' instead? What is 'std'?
+Answer: no idea, never heard of 'std'
+
+I think: on his resume he also said he is a Java expert. Let's see if he knows the difference between the two. He *must* have noticed that one is byte-compiled and the other one is compiled to native code! Otherwise, how does he run his code? He must answer this question correctly:
+
+Me: what is the difference between Java and C++? One has a Virtual Machine, what about the other?
+Him: Java has the Java Virtual Machine
+Me: yes, and C++?
+Him: I guess C++ has a virtual machine too. The C++ Virtual Machine
+
+Me (exhausted): okay, I don't have any other questions, we will let you know
+
+And this is the story of how I got scared of interviews
+stacked (https://devrant.com/rants/1246301)
+%
+"OUR SERVER IS DOWN!!!!!!"
+*ssh server*
+*succesfully logged into the server*
+"The server is very much up, sir."
+"BUT THIS WEBSITE ISN'T WORKING ANYMORE!!!!"
+
+Ah, so one of your websites on that server with 100s of websites on it is not working anymore. That doesn't mean that you're entire fucking server is down. Please learn the fucking difference.
+linuxx (https://devrant.com/rants/1245017)
+%
+Revenge of the developer.
+After our project consultants aren't good at planning projects I started my revenge. They will get soon a heart attack or paranoia...
+Every time I need something from them (cause they missed it in the specs) and see them at the end of the floor. I stealth in their room and stand behind their door. When they are sitting, the door is closing mystically and I step to them. The faces are hilarious. That's my way to teach them to write better Specs :)
+Kanimaru (https://devrant.com/rants/1243973)
+%
+
+Interviewer:
+This is a very serious and prestigious position, we take care of the most important bits of code.
+
+*Proceeds to talk introductory nonsense*
+
+Interviewer:
+Do you know what a DNS is?
+
+Me:
+Yes, of course! DNS stands for Domain Name System.... Blah blah blah... I explain about the servers, about hosts file, about DNS spoofing and everything else possible on this topic.
+
+Interviewer:
+See, I was patient with you - letting you finish. I'm not sure what you're talking about and where you got it from, but a DNS is that line in the browser where you type the site's name.
+
+He didn't ask any more questions, just told me that they'll get back to me. I asked not to do that.
+
+Three weeks later I got an email claiming that I'm not qualified.
+Noob (https://devrant.com/rants/1195214)
+%
+[Background]
+My father works as a hardware developer in a medium-large company.
+
+We(dad+me) also design and build test equipment to be used at said company.
+Usually, these are Arduino controlled pieces of harware. I write the code for these projects.
+
+[END BACKGROUND]
+
+One of these projects had a simple communication system over serial(human readable commands).
+I wrote a simple WinForms application (which loads a config XML and has a GUI to send these commands), because appearantly it's too hard for SOFTWARE DEVELOPERS(who are writing code for the device, which the test equipment is for) to use hyperterm(or some other serial monitor) to control it, when given a step by step maunal.
+
+I get complaints, that this application(img) is 'not working' or 'too hard to use'. I works perfectly.
+All you have to do is:
+1. select com port(to wich the device is connected)
+2. press connect; wat until it says "connected" After that, the option to "load config file" unlocks.
+3. now, select the file(press '...' for openFileDialog) and press load.
+4. Now the deafult settings are send immediatly. You can then, select the options from the list on the left, and change them with the radio buttons. The changes are automatically sent.
+
+All these morons seem to be able to do is:
+1. check the "expert mode" checkbox(opens up more options(unnecessary for their use case))
+2. mess it up
+3. complain
+
+My father often complains, how bad the software devs(at that office) are.
+They are (almost all, some exeptions) incompetent pieces of shit from India, who take age to do anything.
+I had to look at some CVs and Resumés of them(both SW and HW). ( My father is the team leader and head HW dev and had to hire an HW dev They were full of bullshit and spelling errors, bad language and more.
+
+Tl;Dr; Wrote software for use in my dad's company, software devs to stupid to use it.
+xzvf (https://devrant.com/rants/1194971)
+%
+Installed Linux on an old windows laptop. This is my conversation 5 minutes ago...
+
+Wife: "Have how you got internet?"
+Me: "What do you mean, it has a wireless adapter built in?"
+Wife: "But it's not Windows?"
+
+WTF!!!
+
+Me: "Pass my phone, this is going on devRant"
+Wife: "Please no, not again"
+CodeKill (https://devrant.com/rants/828368)
+%
+Cortana, please open Firefox.
+>okay, anon
+Cortana, type in browser "Cortana rule 34"
+>O....Okay sure anon
+Cortana, open that first link.
+>...This link is...uh...Not safe for...
+OPEN IT.
+>y-yes, anon
+Cortana, download every image you see and save it in a folder called "I am a dirty girl"
+>why,anon? Why are you ....
+Don't make me install gentoo
+>Saving files
+Who's a dirty little girl ?
+>I.....I am anon
+sam6996 (https://devrant.com/rants/765491)
