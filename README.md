@@ -2,10 +2,9 @@
 some fortunes and Stories from devRant(https://devrant.com)
 
 ## Files
-
-The File `devRant` is for is for "normal Rants", `devRant.stories` for Files that are so long that they would pollute every Terminal(https://devrant.com/rants/194632)
+The Rant are going into the devRant File.
 To seperate different comments use -------- .
-Stitching of different comments is allowed, but remove the 1/x Parts. If someone other than the Ranter write something that is 
+Stitching of comments is allowed, but remove the 1/x Parts. If someone other than the Ranter write something that is Relevant or humorus you can add it o the Rant with the comment seperator and the DevRanter username.
 The format of the fortunes is (The number of the Rant is 9999999):
 ```
 Rant
