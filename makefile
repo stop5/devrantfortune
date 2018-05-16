@@ -3,13 +3,12 @@
 %.dat: %
 	strfile $< $<.dat
 
-build: devRant.dat devRant.stories.dat
+build: devRant.dat
 
 install: build
 	cp -t /usr/share/games/fortunes devRant.dat devRant
-	cp -t /usr/share/games/fortunes devRant.stories.dat devRant.stories
 
 clean:
-	rm -f devRant.dat devRant.stories.dat
+	rm -f devRant.dat
 
 .PHONY: install build clean
